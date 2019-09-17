@@ -1,4 +1,4 @@
-package com.example.hellotoast;
+package com.example.HelloConstraint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,15 +7,21 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+//extends provides compatability with previous Android versions.
 public class MainActivity extends AppCompatActivity {
 
     private int mCount = 0;
     private TextView mShowCount;
 
     @Override
+    //onCreate calls AppCompatActivity to create nessecary app functionality
+    //onCreate Android will call AppCompatActivity and pass results to OnCreate method
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView calls resource. eg., R - res folder, layout - layout folder, activity_main = is this XML file
+//        setContentView(R.layout.activity_main);
+
         mShowCount = (TextView) findViewById(R.id.show_count);
     }
 
